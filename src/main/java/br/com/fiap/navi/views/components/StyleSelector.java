@@ -10,8 +10,18 @@ public class StyleSelector extends Select<String> {
         this.setHelperText("Escolha um estilo de escrita para a tradução");
         this.setPrefixComponent(VaadinIcon.CHAT.create());
         this.setMinWidth("300px");
-        //defina aqui os estilos de escrita que deseja disponibilizar
-        this.setItems("Formal", "Informal");
-        this.setEmptySelectionAllowed(false);
+
+        // Estilos de escrita disponíveis (Opção 2 - strings simples)
+        this.setItems(
+            "Gíria das ruas",
+            "Criança de 2 anos",
+            "Juridiquês",
+            "Caipira",
+            "Fausto Silva"
+        );
+
+        // Valor padrão vazio
+        this.setEmptySelectionAllowed(true);
+        this.setPlaceholder("Selecione um estilo...");
     }
 }
